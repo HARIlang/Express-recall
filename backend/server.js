@@ -10,6 +10,10 @@ app.get('/contact',(req,res)=>{   // contact page
 res.send("welcome to contact page");
 
 });
+app.get('*',(req,res)=>{           //  error 404 page;
+res.end("error 404");
+
+})
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
