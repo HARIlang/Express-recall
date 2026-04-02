@@ -1,21 +1,9 @@
-const express = require('express'); 
+const express = require('express')
+
 const app = express();
-const port = 4000;
 
-app.get('/', (req, res) => {     // home page;
-  res.send("Welcome to home page");
-});
-
-app.get('/contact',(req,res)=>{   // contact page
-res.send("welcome to contact page");
-
-});
-app.get('*',(req,res)=>{           //  error 404 page;
-res.end("error 404");
-
-})
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-  
-});  // created server using the express
+  console.log(`Server is running on port ${port}`);
+});
